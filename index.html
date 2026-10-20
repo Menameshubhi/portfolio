@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shubhangi Sharma · Product Designer</title>
+  <meta name="description" content="Explore the interactive portfolio of Shubhangi Sharma, a Product Designer with 5+ years of experience. Walk through her world and visit the places she has worked.">
+  <meta name="theme-color" content="#B8DC98">
+  <meta property="og:title" content="Shubhangi Sharma · Product Designer">
+  <meta property="og:description" content="An explorable, illustrated portfolio. Click a building to explore my journey.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#directory" data-open-directory>Skip to the project directory</a>
+
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <div class="loader-card">
+      <div id="loader-art" class="loader-art"></div>
+      <p class="loader-title">Setting up Shubhangi’s world…</p>
+      <div class="loader-bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <header class="topnav">
+    <a class="brand" href="#/home" data-go="home" aria-label="Shubhangi Sharma, Product Designer. Walk home">
+      <span class="brand-avatar" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Shubhangi Sharma</strong><span>Product Designer</span></span>
+    </a>
+    <p class="nav-hint"><span data-icon="pointer"></span> Click a building to explore my journey.</p>
+    <nav class="nav-actions" aria-label="Site">
+      <button type="button" class="btn btn-nav" data-open-directory aria-haspopup="dialog" title="Project directory (D)">
+        <span data-icon="map"></span><span class="btn-label">Directory</span></button>
+      <a class="btn btn-nav" data-resume href="#"><span data-icon="file"></span><span class="btn-label">View Resume</span></a>
+      <button type="button" class="btn btn-nav btn-primary" data-go="future" data-direct><span data-icon="mail"></span><span class="btn-label">Contact Me</span></button>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <button type="button" class="btn btn-nav btn-toggle" id="sound-btn" aria-pressed="false"></button>
+      <button type="button" class="btn btn-nav btn-toggle" id="motion-btn" aria-pressed="false"></button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="sr-only">Shubhangi Sharma, Product Designer: interactive portfolio</h1>
+    <div id="world" class="world">
+      <div id="stage" class="stage">
+        <svg id="map" class="map" role="group" aria-label="Illustrated map of Shubhangi’s world. Each building is a button: Home, Visit Health, Interview Kickstart, Affixious Consultancy and a future workplace for contact." preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+    <div id="tip" class="tip" role="tooltip" hidden></div>
+    <div id="bubble" class="bubble" aria-live="polite"></div>
+    <p class="touch-hint"><span data-icon="pointer"></span> Tap a building to explore my journey.</p>
+  </main>
+
+  <section id="panel" class="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+    <header class="panel-head">
+      <div id="panel-head"></div>
+      <button type="button" class="btn icon-btn panel-close" data-close aria-label="Close window and return to the world"><span data-icon="close"></span></button>
+    </header>
+    <div id="panel-body" class="panel-body"></div>
+  </section>
+
+  <div id="scrim" class="scrim" data-close-directory hidden></div>
+  <aside id="directory" class="directory" role="dialog" aria-modal="true" aria-labelledby="dir-title" hidden>
+    <header class="dir-head">
+      <div>
+        <p class="eyebrow">Prefer a list?</p>
+        <h2 id="dir-title" tabindex="-1">Project directory</h2>
+      </div>
+      <button type="button" class="btn icon-btn" data-close-directory aria-label="Close directory"><span data-icon="close"></span></button>
+    </header>
+    <p class="dir-intro">Jump straight to any part of the portfolio. No walking needed.</p>
+    <ul id="dir-list" class="dir-list"></ul>
+    <div class="dir-foot">
+      <a class="btn btn-primary" data-resume href="#"><span data-icon="file"></span> View resume</a>
+      <p class="dir-keys"><kbd>Tab</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close · <kbd>D</kbd> directory</p>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">
+      <h2>Shubhangi Sharma, Product Designer</h2>
+      <p>This interactive portfolio needs JavaScript. Please enable it to explore the world.</p>
+    </div>
+  </noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
